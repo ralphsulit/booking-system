@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import Button from '../Button/Button'
+
 import './Navbar.css'
 
 const navbar = () => {
@@ -15,7 +17,7 @@ const navbar = () => {
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
         </ul>
-        <button>Book now</button>
+        <Button />
       </nav>
     </div>
   )

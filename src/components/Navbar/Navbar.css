@@ -25,15 +25,4 @@ nav {
       }
     }
   }
-
-  button {
-    background-color: #0274be;
-    color: #fff;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-  }
 }

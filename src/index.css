@@ -23,12 +23,3 @@ body::before {
   z-index: -1;
 }
 
-header {
-  background-image: url(./assets/cover_img.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  color: #202020;
-  height: 80vh;
-}
-
