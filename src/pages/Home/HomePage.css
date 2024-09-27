@@ -1,85 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-header {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: normal;
-  color: #202020;
-  height: 80vh;
-  
-  .bg-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(../../assets//cover_img.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-  }
-
-  .banner-container {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 20px;
-    text-align: center;
-
-    h1 {
-      text-transform: uppercase;
-      font-size: 6em;
-      max-width: 680px;
-    }
-    
-    h2 {
-      text-transform: capitalize;
-      font-weight: 400;
-      font-size: 2em;
-    }
-
-    h3 {
-      font-family: "Poppins", sans-serif;
-      font-weight: 200;
-    }
-  }
+.header__container {
+  padding: 1rem 1rem 5rem 1rem;
 }
 
-section {
+.header__image__container {
+  position: relative;
+  min-height: 500px;
+  background-image: linear-gradient(to right, rgba(44,56,85,.9),rgba(100,125,187,.1)),url('../../assets/cover1_img.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+.header__content {
+  max-width: 600px;
+  padding: 5rem 2rem;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header__content p {
+  color: var(--extra-light);
+  font-size: 1.3rem;
+}
+
+.booking__container {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  background-color: rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: (10px);
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+
+.booking__container form {
   width: 100%;
-  background-color: #eaf7ff;
-  font-family: 'Poppins', sans-serif;
-  
-  .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 100px;
-    max-width: 1440px;
-    margin: 0 auto;
-
-    .content-img {
-      background-image: url(../../assets/content_img.jpg);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 10px;
-      height: 400px;
-      width: 400px;
-    }
-
-  .content-text {
-    width: 600px;
-
-    h1 {
-      font-size: 3em;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-    }
-  }
-  }
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
+
+.booking__container .input__group {
+  width: 100%;
+  position: relative;
+}
+
+.booking__container label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.booking__container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--text-dark);
+}
+
+.booking__container input:focus ~ label {
+  font-size: 0.8rem;
+  top: 0;
+}
+
+.booking__container .form__group p{
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.booking__container .btn {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.booking__container .btn:hover {
+  background-color: var(--primary-color-dark);
+}
+

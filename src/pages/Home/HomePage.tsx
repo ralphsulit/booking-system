@@ -1,26 +1,35 @@
-import Button from '../../components/Button/Button'
+// import Button from '../../components/Button/Button'
 
 import './HomePage.css'
 
 const Home = () => {
   return (
-    <header>
-      <div className="bg-image"></div>
-      <div className='banner-container'>
-        <h2>private resort</h2>
-        <h1>mardens place</h1>
-        <h3>Escape the ordinary and discover tranquility</h3>
-      </div>
-      <section>
-        <div className="content">
-          <div className="content-img"></div>
-          <div className="content-text">
-            <h1>Focusing on Comfort and Serenity</h1>
-            <p>Discover a hidden gem in Rizal: Mardens Place, where your comfort is our priority.</p>
-            <Button />
-          </div>
+    <header className="section__container header__container">
+      <div className="header__image__container">
+        <div className="header__content">
+          <h1>Enjoy Your Dream Vacation</h1>
+          <p>Escape the ordinary and discover tranquility.</p>
         </div>
-      </section>
+        <div className="booking__container">
+          <form>
+            <div className="form__group">
+              <div className="input__group">
+                <input type="text" />
+                <label>Check In</label>
+              </div>
+              <p>Add date</p>
+            </div>
+            <div className="form__group">
+              <div className="input__group">
+                <input type="text" />
+                <label>Check Out</label>
+              </div>
+              <p>Add date</p>
+            </div>
+          </form>
+          <button className='btn'><i className="ri-search-line"></i></button>
+        </div>
+      </div>
     </header>
   )
 }

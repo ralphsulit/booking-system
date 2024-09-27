@@ -1,28 +1,33 @@
 nav {
-  background-color: #fff;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
   display: flex;
-  justify-content: space-around;
-  padding: 20px;  
+  align-items: center;
+  justify-content: space-between;
 
-  h1 {
+  .nav__logo {
     font-family: "Dancing Script", cursive;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
   }
 
-  ul {
+  .nav__links {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    list-style-type: none;
-    
-    li {
-      padding: 8px; 
-      
-      a {
-        color: #202020;
-        text-decoration: none;  
-      }
-    }
+    gap: 2rem;
+  }
+
+  .link a {
+    font-weight: 500;
+    color: var(--text-light);
+    transition: 0.3s;
+  }
+  
+  .link a:hover {
+    color: var(--primary-color);
   }
 }
