@@ -38,7 +38,6 @@ nav {
     width: 100%;
     padding: 2rem;
     transform: translateY(-100%);
-    transition: 0.5s;
     z-index: -1;
   }
 
@@ -63,5 +62,38 @@ nav {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav__bar {
+      padding: 0;
+      background-color: transparent;
+    }
+  
+    .nav__menu__btn {
+      display: none;
+    }
+  
+    .nav__links {
+      padding: 0;
+      width: unset;
+      position: static;
+      transform: none;
+      flex-direction: row;
+      background-color: transparent;
+    }
+
+    .link a {
+      color: var(--primary-color);
+    }
+
   }
 }
